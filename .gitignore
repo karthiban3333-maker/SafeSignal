@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+build/
+
+# Environment variables & secrets (NEVER COMMIT)
+.env
+.env.local
+.env.*.local
+.env.*
+!.env.example
+accounts.json
+*.key
+*.pem
+secret*
+secrets/
+
+# Firebase
+.firebase/
+.firebaserc.local
+*.log
+
+# Editor & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.pdf
+*.docx
+*.zip
+*.tar.gz
