@@ -6,6 +6,22 @@ SafeSignal is a mission-critical safety platform built for venues, campuses, cor
 
 ---
 
+## 📖 About the Project
+
+### 🎯 Problem Statement
+During large events, college festivals, nightlife venues, or corporate campuses, individuals facing medical emergencies, physical safety threats, or crowd crushes face critical delays. Traditional security protocols require downloading bloated native apps, dialing crowded local numbers, or hunting down on-ground guards. Most systems cannot broadcast accurate indoor/outdoor GPS telemetry to dispatch teams in real time without heavy registration hurdles.
+
+### 💡 The Solution
+SafeSignal removes all friction from emergency reporting. By placing dynamic QR codes across venue badges, table tents, and posters, visitors can scan and instantly access a zero-login emergency portal. A single tap activates an immediate SOS trigger that broadcasts hardware-level GPS coordinates to security dashboards via Firebase WebSockets in under 200ms, simultaneously dispatching automated emergency SMS alerts with live tracking links to designated contacts.
+
+### 🌟 Core Value Proposition
+- **Frictionless QR Onboarding**: Instant zero-download access via browser and camera QR scanning for temporary visitors and guests.
+- **Sub-Second Real-Time Telemetry**: Real-time bidirectional WebSocket syncing powered by Cloud Firestore `onSnapshot` listeners.
+- **Multi-Channel Emergency Broadcasts**: Simultaneous on-screen dispatch alerts and automated SMS delivery via Fast2SMS.
+- **High-Stress Dark Glassmorphism UI**: High-contrast, intuitive mobile design ensuring rapid navigation even under duress.
+
+---
+
 ## ✨ Features
 
 - 🆘 **One-Tap Emergency SOS Trigger** — Rapid distress activation capturing high-precision GPS coordinates from device hardware with live status telemetry.
@@ -76,16 +92,11 @@ npm install
 ```
 
 ### 3. Configure Environment Variables
-Create a `.env` file in the project root:
-```env
-VITE_FIREBASE_API_KEY=your_api_key_here
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-VITE_FAST2SMS_API_KEY=your_fast2sms_api_key
+Copy `.env.example` to `.env`:
+```bash
+cp .env.example .env
 ```
+Provide your Firebase and Fast2SMS credentials.
 
 ### 4. Start Development Server
 ```bash
